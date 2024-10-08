@@ -34,9 +34,6 @@ function Navbar() {
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <img src="src/assets/logo.png" alt="CPCL Logo" className="h-14" />
-          <h1 className="text-2xl font-bold text-blue-700">
-            Chennai Petroleum Corporation Limited
-          </h1>
         </div>
         <div className="flex items-center space-x-4">
           {isSearchOpen && (
