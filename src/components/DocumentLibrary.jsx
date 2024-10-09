@@ -52,7 +52,7 @@ function DocumentLibrary() {
                 <td className="px-4 py-2">{doc.category}</td>
                 <td className="px-4 py-2">{doc.downloads}</td>
                 <td className="px-4 py-2">
-                  <button className="flex items-center bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 transition-colors">
+                  <button className="flex items-center hover:bg-blue-700 text-white px-2 py-1 rounded bg-blue-600 transition-transform duration-300 ease-in-out transform hover:scale-105">
                     <Download className="h-5 w-5 mr-1" />
                     Download
                   </button>

@@ -15,7 +15,7 @@ const CalendarTab = () => {
       <Calendar
         onChange={onChange}
         value={value}
-        className="react-calendar rounded-lg font-bold border-none  "
+        className="react-calendar rounded-lg font-bold border-none"
       />
     </div>
   );

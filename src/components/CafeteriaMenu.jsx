@@ -1,5 +1,6 @@
 import { Coffee } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   {
@@ -38,8 +39,15 @@ function CafeteriaMenu() {
   return (
     <div className="bg-white rounded-lg shadow p-6 mt-8">
       <div className="flex items-center mb-4">
-        <Coffee className="h-8 w-8 text-blue-600 mr-3" />
-        <h2 className="text-2xl font-bold">CAFETERIA MENU</h2>
+        <Link
+          to="/cafeteria"
+          className="flex items-center  hover:text-blue-800"
+        >
+          <Coffee className="h-8 w-8 text-blue-600 mr-3 hover:text-blue-800" />
+          <h2 className="text-2xl font-bold hover:text-blue-800">
+            CAFETERIA MENU
+          </h2>
+        </Link>
       </div>
       <div className="space-y-4">
         {todayMenu ? (

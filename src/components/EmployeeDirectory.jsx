@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const employees = [
   {
@@ -41,7 +42,12 @@ function EmployeeDirectory() {
   return (
     <div className="bg-white rounded-lg shadow p-6 mt-8">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold mr-4">EMPLOYEE DIRECTORY</h2>
+        <Link
+          to="/directory"
+          className="flex items-center  hover:text-blue-800"
+        >
+          <h2 className="text-2xl font-bold mb-4">EMPLOYEE DIRECTORY</h2>
+        </Link>
         <div className="flex items-center border rounded-lg">
           <input
             id="employee_directory"
@@ -88,6 +94,13 @@ function EmployeeDirectory() {
             )}
           </tbody>
         </table>
+        <div className="flex justify-end mt-4">
+          <Link to="/directory">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+              Show More
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

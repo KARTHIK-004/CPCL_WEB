@@ -8,11 +8,11 @@ import {
 } from "lucide-react";
 
 const links = [
-  { name: "Operations", icon: <Settings /> },
-  { name: "HSE Portal", icon: <ShieldCheck /> },
-  { name: "IT Helpdesk", icon: <MessageCircleQuestion /> },
-  { name: "Reports", icon: <ChartColumnIncreasing /> },
-  { name: "Directory", icon: <Users /> },
+  { name: "Setting", icon: <Settings />, link: "/setting" },
+  { name: "HSE Portal", icon: <ShieldCheck />, link: "/" },
+  { name: "IT Helpdesk", icon: <MessageCircleQuestion />, link: "/helpdesk" },
+  { name: "Reports", icon: <ChartColumnIncreasing />, link: "/" },
+  { name: "Directory", icon: <Users />, link: "/directory" },
 ];
 
 function Links() {
@@ -21,8 +21,8 @@ function Links() {
       {links.map((link) => (
         <a
           key={link.name}
-          href="#"
-          className="flex flex-col items-center justify-center w-24 h-24 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          href={link.link}
+          className="flex flex-col items-center justify-center w-24 h-24 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition-transform duration-300 ease-in-out transform hover:scale-105"
         >
           <span className="text-2xl mb-2">{link.icon}</span>
           <span className="text-sm text-center">{link.name}</span>

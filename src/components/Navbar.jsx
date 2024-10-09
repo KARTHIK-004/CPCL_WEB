@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Search, HelpCircle, User, Settings, LogOut } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -33,7 +33,9 @@ function Navbar() {
     <nav className="bg-white shadow">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <img src="src/assets/logo.png" alt="CPCL Logo" className="h-14" />
+          <Link to="/">
+            <img src="src/assets/logo.png" alt="CPCL Logo" className="h-14" />
+          </Link>
         </div>
         <div className="flex items-center space-x-4">
           {isSearchOpen && (
@@ -52,7 +54,7 @@ function Navbar() {
           <HelpCircle className="h-5 w-5 text-black" />
           <div className="relative">
             <button
-              className="flex items-center space-x-2 focus:outline-none"
+              className="flex items-center space-x-2 focus:outline-none transition-transform duration-300 ease-in-out transform hover:scale-105"
               onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
             >
               <img
@@ -87,13 +89,13 @@ function Navbar() {
                       <User className="mr-2 h-4 w-4 text-black" />
                       Profile
                     </button>
-                    <button
-                      className="w-full flex items-center justify-start hover:bg-gray-100 p-2 rounded-md"
-                      onClick={() => alert("Settings clicked")}
-                    >
-                      <Settings className="mr-2 h-4 w-4" />
-                      Settings
-                    </button>
+                    <Link to="/setting">
+                      <button className="w-full flex items-center justify-start hover:bg-gray-100 p-2 rounded-md">
+                        <Settings className="mr-2 h-4 w-4" />
+                        Settings
+                      </button>
+                    </Link>
+
                     <NavLink to="/logout">
                       <button className="w-full flex items-center justify-start text-red-500 hover:bg-red-100 p-2 rounded-md">
                         <LogOut className="mr-2 h-4 w-4" />

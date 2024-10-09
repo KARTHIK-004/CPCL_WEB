@@ -10,7 +10,6 @@ const retirements = [
   { name: "Geeta Singh", date: "Retirement on December 30, 2024" },
 ];
 
-// Function to sort retirements based on date
 const sortRetirements = (retirements) => {
   return retirements.sort((a, b) => {
     const dateA = new Date(a.date.replace("Retirement on ", ""));

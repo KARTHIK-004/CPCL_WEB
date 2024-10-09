@@ -61,7 +61,7 @@ function QuickAction() {
           displayedCategories.map((category) => (
             <button
               key={category}
-              className="p-4 bg-gray-100 rounded text-center hover:bg-gray-200 transition-colors"
+              className="p-4 bg-gray-100 rounded text-center hover:bg-gray-200 transition-transform duration-300 ease-in-out transform hover:scale-105"
             >
               {category}
             </button>
@@ -77,7 +77,7 @@ function QuickAction() {
         <div className="flex justify-end mt-4">
           <button
             onClick={() => setShowMore(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105"
           >
             Show More
           </button>
@@ -88,7 +88,7 @@ function QuickAction() {
         <div className="flex justify-end mt-4">
           <button
             onClick={() => setShowMore(false)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-transform duration-300 ease-in-out transform hover:scale-105"
           >
             Show Less
           </button>
